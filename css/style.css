@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+
+    width: 45px;
+}
+
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+    font-family: sans-serif;
+
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.navbar-links li a:hover{
+    color: white;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+header .hero{
+    height: 100vh;
+    background-image: url('../img/herobg.jpg');
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+header .hero .name{
+    font-family: "Cabin Condensed", sans-serif;
+    font-size: 100px;
+}
+
+header .hero p{
+    font-family: "Cabin Condensed", sans-serif;
+    font-size: 30px;
+    /* color: rgb(39, 148, 112); */
+}
+
+
+.side-links {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.side-link i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+
+.fa-youtube{
+    color: red;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.fa-instagram{
+    color: rgb(210, 64, 88);
+    font-size: 30px;
+    margin: 5px 0;
+
+}
+
+.fa-twitter{
+    margin: 5px 0;
+
+    color: black;
+    font-size: 30px;
+}
+
+
+
+
+/*---------- Landing Page -----------*/
+.landing-hero-wrapper  {
+    padding: 0;
+  }
+  
+  .landinghero {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+  }
+  
+  /* rgb(0, 122, 128) background */
+  .landinghero-bg {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    background-color: rgb(0, 122, 128);
+  }
+  
+  /* header and image */
+  .landinghero-content {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+      display: grid;
+      width: calc(100% - 40px); /* 100% minus the padding on sides) */
+      max-width: 900px;
+      justify-self: center;
+      margin: 50px 0;
+  }
+  
+  .landinghero-content h1 {
+    /* font-size: 96px; */
+    font-size: calc(0.5rem + 10vmin);
+    margin:0;
+    line-height: 0.5;
+    grid-row: 1;
+  }
+  
+  .landinghero-content h2 {
+    /* font-size: 72px; */
+    font-size: calc(0.5rem + 9vmin);
+    margin:0;
+    font-weight: 200;
+    letter-spacing: 5px;
+  }
+  
+  .landinghero-content span {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    grid-row: 2;
+    margin-bottom: 100px;
+  }
+  
+  .landinghero-content h3 {
+    /* font-size: 28px; */
+    font-size: calc(0.5rem + 2vmin);
+    line-height: 0.5;
+    font-family: 'Alegreya', serif;
+    justify-self: end;
+    width:70%;
+    text-align: right;
+  }
+  
+  .landinghero-content span hr {
+    position: relative;
+    border: 0;
+    height: 1px;
+    background: black;
+  }
+  
+  .landinghero-content img {
+    width: 70%;
+    max-width: 400px;
+    justify-self: end;
+    grid-column: 1;
+    grid-row: 3
+  }
+  
+  /* Arrow end */
+  .landinghero-content span hr:after {
+    position: absolute;
+    left: -23px;
+    top: -10px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    transform: rotateZ(-45deg);
+  } 
+  
+  .landing-bottomleft_deco {
+      position: relative;
+      align-self: end;
+      height: 70%;
+      width: 20%;
+      max-width: 300px;
+      border-bottom: 1px solid #000000;
+      border-left: 1px solid #000000;
+      grid-column: 1;
+      grid-row: 3;
+  }
+  
+  /* Arrow 1 */
+  .landing-bottomleft_deco:before {
+    position: absolute;
+    left: 20%;
+    bottom: -11px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    transform: rotateZ(-45deg);
+  } 
+  
+  /* Arrow 2 */
+  .landing-bottomleft_deco:after {
+    position: absolute;
+    left: 40%;
+    bottom: -11px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    transform: rotateZ(-45deg);
+  } 
+  
+  /* Arrow 3 - just added a span! */
+  .landing-bottomleft_deco span:before {
+    position: absolute;
+    left: 60%;
+    bottom: -11px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    transform: rotateZ(-45deg);
+  } 
+  
+  
+  
+table, th,td{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    padding: 30px;
+}
+
+button{
+    font-size: 17px;
+    padding: 10px 20px;
+    background-color: tomato;
+    border: 1px solid rgb(219, 67, 40);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.downloads h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.downloads{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+    width: 80vw;
+}
+th, td{
+    padding: 10px 60px;
+    font-size: 18px;
+    font-family: "Cabin Condensed", sans-serif;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchInput{
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: sans-serif;
+}
+
+
